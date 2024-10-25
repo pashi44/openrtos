@@ -1,0 +1,3 @@
+/home/hadoop/esp-idf/amazonRTOS/build/CMakeFiles/finalExecutable.dir
+/home/hadoop/esp-idf/amazonRTOS/build/CMakeFiles/edit_cache.dir
+/home/hadoop/esp-idf/amazonRTOS/build/CMakeFiles/rebuild_cache.dir
