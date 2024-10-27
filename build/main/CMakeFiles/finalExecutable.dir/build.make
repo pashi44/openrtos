@@ -73,15 +73,15 @@ main/CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o: main/CMakeFiles/finalExecu
 main/CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o: /home/hadoop/esp-idf/openrtos/main/amazonRTOS.cpp
 main/CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o: main/CMakeFiles/finalExecutable.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hadoop/esp-idf/openrtos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object main/CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o"
-	cd /home/hadoop/esp-idf/openrtos/build/main && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT main/CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o -MF CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o.d -o CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o -c /home/hadoop/esp-idf/openrtos/main/amazonRTOS.cpp
+	cd /home/hadoop/esp-idf/openrtos/build/main && /home/hadoop/esp-idf/openrtos/build/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT main/CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o -MF CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o.d -o CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o -c /home/hadoop/esp-idf/openrtos/main/amazonRTOS.cpp
 
 main/CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.i"
-	cd /home/hadoop/esp-idf/openrtos/build/main && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hadoop/esp-idf/openrtos/main/amazonRTOS.cpp > CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.i
+	cd /home/hadoop/esp-idf/openrtos/build/main && /home/hadoop/esp-idf/openrtos/build/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hadoop/esp-idf/openrtos/main/amazonRTOS.cpp > CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.i
 
 main/CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.s"
-	cd /home/hadoop/esp-idf/openrtos/build/main && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hadoop/esp-idf/openrtos/main/amazonRTOS.cpp -o CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.s
+	cd /home/hadoop/esp-idf/openrtos/build/main && /home/hadoop/esp-idf/openrtos/build/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hadoop/esp-idf/openrtos/main/amazonRTOS.cpp -o CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.s
 
 # Object files for target finalExecutable
 finalExecutable_OBJECTS = \
@@ -92,7 +92,6 @@ finalExecutable_EXTERNAL_OBJECTS =
 
 main/finalExecutable: main/CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o
 main/finalExecutable: main/CMakeFiles/finalExecutable.dir/build.make
-main/finalExecutable: component1/libcomponent1.a
 main/finalExecutable: main/CMakeFiles/finalExecutable.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hadoop/esp-idf/openrtos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable finalExecutable"
 	cd /home/hadoop/esp-idf/openrtos/build/main && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/finalExecutable.dir/link.txt --verbose=$(VERBOSE)

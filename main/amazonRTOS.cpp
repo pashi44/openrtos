@@ -1,6 +1,8 @@
 
 #include "component1.h"
 #include <stdio.h>
+#include <esp_timer.h>
+
 #ifdef __cplusplus
 extern "C"
 {

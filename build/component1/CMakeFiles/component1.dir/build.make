@@ -73,15 +73,15 @@ component1/CMakeFiles/component1.dir/component1.cpp.o: component1/CMakeFiles/com
 component1/CMakeFiles/component1.dir/component1.cpp.o: /home/hadoop/esp-idf/openrtos/component1/component1.cpp
 component1/CMakeFiles/component1.dir/component1.cpp.o: component1/CMakeFiles/component1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hadoop/esp-idf/openrtos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object component1/CMakeFiles/component1.dir/component1.cpp.o"
-	cd /home/hadoop/esp-idf/openrtos/build/component1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT component1/CMakeFiles/component1.dir/component1.cpp.o -MF CMakeFiles/component1.dir/component1.cpp.o.d -o CMakeFiles/component1.dir/component1.cpp.o -c /home/hadoop/esp-idf/openrtos/component1/component1.cpp
+	cd /home/hadoop/esp-idf/openrtos/build/component1 && /home/hadoop/esp-idf/openrtos/build/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT component1/CMakeFiles/component1.dir/component1.cpp.o -MF CMakeFiles/component1.dir/component1.cpp.o.d -o CMakeFiles/component1.dir/component1.cpp.o -c /home/hadoop/esp-idf/openrtos/component1/component1.cpp
 
 component1/CMakeFiles/component1.dir/component1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/component1.dir/component1.cpp.i"
-	cd /home/hadoop/esp-idf/openrtos/build/component1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hadoop/esp-idf/openrtos/component1/component1.cpp > CMakeFiles/component1.dir/component1.cpp.i
+	cd /home/hadoop/esp-idf/openrtos/build/component1 && /home/hadoop/esp-idf/openrtos/build/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hadoop/esp-idf/openrtos/component1/component1.cpp > CMakeFiles/component1.dir/component1.cpp.i
 
 component1/CMakeFiles/component1.dir/component1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/component1.dir/component1.cpp.s"
-	cd /home/hadoop/esp-idf/openrtos/build/component1 && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hadoop/esp-idf/openrtos/component1/component1.cpp -o CMakeFiles/component1.dir/component1.cpp.s
+	cd /home/hadoop/esp-idf/openrtos/build/component1 && /home/hadoop/esp-idf/openrtos/build/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20230928/xtensa-esp-elf/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hadoop/esp-idf/openrtos/component1/component1.cpp -o CMakeFiles/component1.dir/component1.cpp.s
 
 # Object files for target component1
 component1_OBJECTS = \

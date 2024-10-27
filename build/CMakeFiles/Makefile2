@@ -111,7 +111,7 @@ main/clean: main/CMakeFiles/finalExecutable.dir/clean
 # Target rules for target main/CMakeFiles/finalExecutable.dir
 
 # All Build rule for target.
-main/CMakeFiles/finalExecutable.dir/all: component1/CMakeFiles/component1.dir/all
+main/CMakeFiles/finalExecutable.dir/all:
 	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/finalExecutable.dir/build.make main/CMakeFiles/finalExecutable.dir/depend
 	$(MAKE) $(MAKESILENT) -f main/CMakeFiles/finalExecutable.dir/build.make main/CMakeFiles/finalExecutable.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/hadoop/esp-idf/openrtos/build/CMakeFiles --progress-num=3,4 "Built target finalExecutable"
@@ -119,7 +119,7 @@ main/CMakeFiles/finalExecutable.dir/all: component1/CMakeFiles/component1.dir/al
 
 # Build rule for subdir invocation for target.
 main/CMakeFiles/finalExecutable.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hadoop/esp-idf/openrtos/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/hadoop/esp-idf/openrtos/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main/CMakeFiles/finalExecutable.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/hadoop/esp-idf/openrtos/build/CMakeFiles 0
 .PHONY : main/CMakeFiles/finalExecutable.dir/rule

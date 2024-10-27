@@ -4,7 +4,14 @@
 # CMakeLists in this exact order for cmake to work correctly
 cmake_minimum_required(VERSION 3.16)
 project(amazonRTOS)
-set(esplib "${IDF_PATH}/components/**")
+message(STATUS $ENV{HOME})
+
+set(esplib "$ENV{IDF_PATH}/components")
+
+set(CMAKE_C_COMPILER "$ENV{HOME}/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc")
+
+set(CMAKE_CXX_COMPILER
+    "$ENV{HOME}/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-g++")
 
 # include($ENV{IDF_PATH}/tools/cmake/project.cmake)
 add_subdirectory(main)
