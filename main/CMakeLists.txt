@@ -1,6 +1,4 @@
-idf_component_register(SRCS "amazonRTOS.cpp" # "../component1/*.cpp" "./**/*.cpp"
-    INCLUDE_DIRS "." "../headers")
+add_executable(finalExecutable "./amazonRTOS.cpp")
 
-file(GLOB_RECURSE PROJECT_SOURCES "${CMAKE_SOURCE_DIR}/*.cpp")
-
-# an laternate to  search  recusive .cpp  files  that  has .cpp  files
+target_link_libraries(finalExecutable PRIVATE component1)
+target_link_directories(finalExecutable PUBLIC ${esplib})

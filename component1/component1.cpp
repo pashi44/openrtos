@@ -1,1 +1,1 @@
-#include "component1.cpp"
+#include "component1.h"

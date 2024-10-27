@@ -1,9 +1,6 @@
-./build 
-./build/*
+build/ 
 sdkconfig 
 \.vscode
-./CMakeLists.txt
-./**/CmakeLists.txt
 
 # Prerequisites
 *.d

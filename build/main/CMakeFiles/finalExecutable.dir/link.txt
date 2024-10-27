@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/finalExecutable.dir/amazonRTOS.cpp.o -o finalExecutable  ../component1/libcomponent1.a

@@ -1,3 +1,8 @@
-/home/hadoop/esp-idf/amazonRTOS/build/CMakeFiles/finalExecutable.dir
-/home/hadoop/esp-idf/amazonRTOS/build/CMakeFiles/edit_cache.dir
-/home/hadoop/esp-idf/amazonRTOS/build/CMakeFiles/rebuild_cache.dir
+/home/hadoop/esp-idf/openrtos/build/CMakeFiles/edit_cache.dir
+/home/hadoop/esp-idf/openrtos/build/CMakeFiles/rebuild_cache.dir
+/home/hadoop/esp-idf/openrtos/build/main/CMakeFiles/finalExecutable.dir
+/home/hadoop/esp-idf/openrtos/build/main/CMakeFiles/edit_cache.dir
+/home/hadoop/esp-idf/openrtos/build/main/CMakeFiles/rebuild_cache.dir
+/home/hadoop/esp-idf/openrtos/build/component1/CMakeFiles/component1.dir
+/home/hadoop/esp-idf/openrtos/build/component1/CMakeFiles/edit_cache.dir
+/home/hadoop/esp-idf/openrtos/build/component1/CMakeFiles/rebuild_cache.dir
