@@ -1,6 +1,9 @@
-build/ 
+/build/ 
+
+/build/* 
+
 sdkconfig 
-\.vscode
+.vscode/
 
 # Prerequisites
 *.d
