@@ -15,12 +15,32 @@
 #include <unistd.h>
 #include <iostream>
 
+#ifndef configIDLE_SHOULD_YIELD
+#define configIDLE_SHOULD_YIELD 1
+#endif
+
+#ifndef INCLUDE_vTaskDelay
+#define INCLUDE_vTaskDelay 1
+#endif
+#ifndef INCLUDE_vTaskDelete
+#define INCLUDE_vTaskDelete 1
+#endif
+
+#ifndef configUSE_IDLE_HOOK
+#define configUSE_IDLE_HOOK 0
+#endif
 extern const char *TAG;
 
-extern void
+// void vApplicationIdleHook(void);
+
+extern "C" void
 TaskFunctionOne(void *);
-extern void TaskFunctionTwo(void *);
+extern "C" void TaskFunctionTwo(void *);
+
+extern "C" void taskWrapper();
 
 // extern TaskHandle_t th1, th2;
+
+extern TaskHandle_t th1, th2;
 
 #endif

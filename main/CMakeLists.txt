@@ -1,9 +1,9 @@
 idf_component_register(
 
-    SRCS "./amazonrtos.cpp" "../tasks/tasks.cpp"
+    SRCS "./amazonrtos.cpp" "../tasks/tasks.cpp" "../queues/queues.cpp"
     INCLUDE_DIRS
 
-    "../tasks/include"
+    "../tasks/include" "../queues/include"
 
     "."
-    PRIV_REQUIRES "driver" "esp_wifi" )
+    PRIV_REQUIRES "driver" "esp_wifi")
