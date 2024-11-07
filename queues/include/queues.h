@@ -12,14 +12,25 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-typedef unsigned int queuetype;
+typedef struct queuestruct
+{
 
+    struct queuestruct *
+        make;
+
+    char *name;
+    unsigned int age;
+} queuetype;
+
+typedef int32_t queueDatatype;
 extern const char *QUEUETAG;
 #ifdef __cplusplus
 extern "C"
 {
 #endif
-    extern void createQueue();
+    extern void queueWrapper();
+
+    extern "C" void sendingToQueueByTasks();
 
 #ifdef __cplusplus
 }

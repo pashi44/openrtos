@@ -14,5 +14,5 @@ app_main(int argc, char **argv)
 {
         // taskWrapper();
 
-        createQueue();
+        queueWrapper();
 }
