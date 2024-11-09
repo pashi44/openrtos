@@ -24,13 +24,17 @@ typedef struct queuestruct
 
 typedef int32_t queueDatatype;
 extern const char *QUEUETAG;
+queueDatatype dataitems[] =
+    {112, 312, 312312, 121231};
+TaskHandle_t qth1;
+
 #ifdef __cplusplus
 extern "C"
 {
 #endif
-    extern void queueWrapper();
 
-    extern "C" void sendingToQueueByTasks();
+    extern void queueWrapper(void *);
+    extern void sendToQueue(void *);
 
 #ifdef __cplusplus
 }

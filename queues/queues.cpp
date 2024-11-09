@@ -1,40 +1,29 @@
 #include <stdio.h>
 #include "queues.h"
+#define writingQueueDelay pdMS_TO_TICKS(0)
+#define queueTickDelay pdMS_TO_TICKS(100)
+// 100ms seconddelay  for queue
 
 const char *QUEUETAG = "from queue module";
+TaskHandle_t qth1 = nullptr;
 
-void sendingToQueueByTasks()
+static QueueHandle_t qh1;
+
+static void queueWrapper(void *)
 {
-}
 
-void queueWrapper()
-{
-    QueueHandle_t qh1 = nullptr;
+    queueDatatype *infucntinDataitesm = (queueDatatype *)dataitems;
 
-    void *queueptr = nullptr; //  to   verify  the heap  address
-
+    BaseType_t
+        xStatus;
     qh1 = xQueueCreate(10, sizeof(queueDatatype));
-    queueptr = qh1;
-    ESP_LOGI(QUEUETAG, "  the  queue is at   location  %p\n\n\n\n", queueptr);
-    ESP_LOGI(QUEUETAG, "  the  queue is at   location  %10p\n\n\n\n", (void *)qh1);
-
-    //  LENGHT OF QUEU AND LENGTH OF EACH DATA TYPE
 
     if (qh1 != NULL)
     {
-        ESP_LOGI(QUEUETAG, " %d\t%s\n", sizeof(queueDatatype), "Queu have been created");
-
-        // sending to  queue  by tasks
-
-        sendingToQueueByTasks();
-    }
-    else
-    {
-        ESP_LOGI(QUEUETAG, "%s\n", "no space mate");
-
-        return;
     }
 
-    queueptr = nullptr;
+    vTaskDelete(nullptr);
     qh1 = nullptr;
+
+    qth1 = nullptr;
 }
