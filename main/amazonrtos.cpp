@@ -13,5 +13,5 @@ extern "C" void
 app_main(int argc, char **argv)
 {
         // taskWrapper();
-        queueWrapper(nullptr);
+        queueWrapper((void *)&dataitems);
 }

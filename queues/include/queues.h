@@ -12,29 +12,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-typedef struct queuestruct
-{
-
-    struct queuestruct *
-        make;
-
-    char *name;
-    unsigned int age;
-} queuetype;
-
-typedef int32_t queueDatatype;
-extern const char *QUEUETAG;
-queueDatatype dataitems[] =
-    {112, 312, 312312, 121231};
-TaskHandle_t qth1;
-
 #ifdef __cplusplus
 extern "C"
 {
 #endif
 
+    typedef struct queuestruct
+
+    {
+
+        struct queuestruct *
+
+            make;
+
+        char *name;
+
+        unsigned int age;
+
+    } queuetype;
+
+    typedef int32_t queueDatatype;
+
+    extern const char *QUEUETAG;
+
+    extern queueDatatype dataitems[6];
+
+    extern TaskHandle_t qth1, qth2;
+
     extern void queueWrapper(void *);
     extern void sendToQueue(void *);
+    void vRecieverTask(void *);
+    void vSenderTask(void *);
 
 #ifdef __cplusplus
 }
