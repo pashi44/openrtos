@@ -1,3 +1,4 @@
+// queues.h
 #ifndef __QUEUEH__
 #define __QUEUEH__
 #include <FreeRTOSConfig.h>
@@ -5,7 +6,6 @@
 #include <freertos/idf_additions.h>
 #include <driver/gpio.h>
 #include <freertos/task.h>
-#include <freertos/stack_macros.h>
 #include <freertos/queue.h>
 #include <freertos/timers.h>
 #include "esp_log.h"
@@ -17,35 +17,31 @@ extern "C"
 {
 #endif
 
-    typedef struct queuestruct
-
+    typedef enum
     {
+        eSender1,
+        eSender2,
+        eSender3
+    } DataSource_t;
+    /* Define the structure type that will be passed on the queue. */
+    typedef struct
+    {
+        uint8_t ucValue;
+        DataSource_t eDataSource;
+    } Data_t;
+    /* Declare two variables of type Data_t that will be passed on the queue. */
+    const Data_t xStructsToSend[3] =
+        {
+            {100, eSender1}, /* Used by Sender1. */
+            {200, eSender2},
+            {254, eSender3} /* Used by Sender2. */
+    };
+    extern QueueHandle_t xQueue;
 
-        struct queuestruct *
-
-            make;
-
-        char *name;
-
-        unsigned int age;
-
-    } queuetype;
-
-    typedef int32_t queueDatatype;
-
-    extern const char *QUEUETAG;
-
-    extern queueDatatype dataitems[6];
-
-    extern TaskHandle_t qth1, qth2;
-
-    extern void queueWrapper(void *);
-    extern void sendToQueue(void *);
-    void vRecieverTask(void *);
     void vSenderTask(void *);
+    void vRecieverTask(void *);
 
 #ifdef __cplusplus
 }
 #endif
-
 #endif
