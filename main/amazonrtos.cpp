@@ -1,23 +1,52 @@
 #include <FreeRTOSConfig.h>
+
 #include <freertos/FreeRTOS.h>
 #include <freertos/idf_additions.h>
+#include <freertos/portmacro.h>
 #include "esp_log.h"
 #include "esp_err.h"
 #include "tasks.h"
 #include "queues.h"
+#include "interrupts.h"
+#include "semaphore.h"
 #include <iostream>
-extern "C" void
-app_main(int argc, char **argv)
+#ifdef __cplusplus
+extern "C"
 {
-        // taskWrapper();
-        xQueue = xQueueCreate(4, sizeof(Data_t));
-        if (xQueue != NULL)
+
+#endif
+
+    void app_main(int argc, char **argv)
+    {
+        if (xBinarySemaphore != NULL)
         {
-                xTaskCreate(vSenderTask, "sender1", 1000, (void *)(xStructsToSend), 2, NULL);
-                xTaskCreate(vSenderTask, "sender2", 1000, (void *)(xStructsToSend + 1), 2, NULL);
-                xTaskCreate(vSenderTask, "sender3", 1000, (void *)(xStructsToSend + 2), 2, NULL);
-                xTaskCreate(vRecieverTask, "reciever", 1000, nullptr, 1, NULL);
+            xTaskCreate(vDefferedTaskHandler,
+                        "hadling deferred task",
+                        1000,
+                        nullptr,
+                        3,
+                        nullptr);
+            xTaskCreate(periodicTask,
+                        "hadling peroidic task",
+                        1000,
+                        nullptr,
+                        1, // non prority  task
+                        nullptr);
+            // vPortSetInterruptHandler(mainINTERRUPTNUM, ulInterruptHandler);
+            // for a particular port
+            xTaskCreate((void (*)(void *))ulInterruptHandler,
+
+                        "hadling isr task",
+
+                        1000,
+
+                        nullptr,
+
+                        7, // non prority  task
+
+                        nullptr);
         }
+    }
 
 #ifdef __cplusplus
 }
